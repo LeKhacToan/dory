@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Phuong Thao</title>
+
+</head>
+
+<body>
+    <div class="container" style="background-color: #e8c3b9">
+        <div id="lottie" style="width: 600px;" />
+
+    </div>
+    <p class="ml2">Dory - Nguyễn Phương Thảo</p>
+
+    <div class="bubbles bubble-1"></div>
+    <div class="bubbles bubble-5"></div>
+    <div class="bubbles bubble-2"></div>
+    <div class="bubbles bubble-6"></div>
+    <div class="bubbles bubble-3"></div>
+    <div class="bubbles bubble-7"></div>
+    <div class="bubbles bubble-4"></div>
+    <div class="bubbles bubble-8"></div>
+    <div class="bubbles bubble-9"></div>
+    <div class="bubbles bubble-10"></div>
+    <div class="bubbles bubble-11"></div>
+    <div class="bubbles bubble-12"></div>
+    <div class="bubbles bubble-13"></div>
+    <div class="bubbles bubble-14"></div>
+    <div class="bubbles bubble-15"></div>
+    <div class="bubbles bubble-16"></div>
+    <div class="bubbles bubble-17"></div>
+    <div class="bubbles bubble-18"></div>
+    <div class="bubbles bubble-19"></div>
+    <div class="bubbles bubble-20"></div>
+    <div class="bubbles bubble-21"></div>
+    <div class="bubbles bubble-22"></div>
+    <div class="bubbles bubble-23"></div>
+    <div class="bubbles bubble-24"></div>
+    <div class="bubbles bubble-25"></div>
+    <div class="bubbles bubble-26"></div>
+    <div class="bubbles bubble-27"></div>
+    <div class="bubbles bubble-28"></div>
+    <div class="bubbles bubble-29"></div>
+    <div class="bubbles bubble-30"></div>
+    <div class="bubbles bubble-31"></div>
+    <div class="bubbles bubble-32"></div>
+    <div class="bubbles bubble-33"></div>
+    <div class="bubbles bubble-34"></div>
+    <div class="bubbles bubble-35"></div>
+    <div class="bubbles bubble-36"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"
+    integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+    const animation = bodymovin.loadAnimation({
+        container: document.getElementById('lottie'), // Required
+        path: 'dory.json',
+        renderer: 'canvas',
+        loop: true,
+        autoplay: true,
+        name: "Dory",
+    })
+
+    // Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml2');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({ loop: true })
+        .add({
+            targets: '.ml2 .letter',
+            scale: [4, 1],
+            opacity: [0, 1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 950,
+            delay: (el, i) => 70 * i
+        }).add({
+            targets: '.ml2',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+</script>
+
+<style>
+    .container {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .ml2 {
+        font-weight: 700;
+        font-size: 2.5em;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .ml2 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #lottie {
+            width: 400px !important;
+        }
+
+        .ml2 {
+            font-weight: 700;
+            font-size: 1.5em;
+
+        }
+    }
+
+    /* Bubbles */
+    .bubbles {
+        position: absolute;
+        bottom: 0;
+        z-index: 5;
+        right: 50px;
+        background-color: white;
+        border-radius: 50%;
+        opacity: .50;
+        width: 10px;
+        height: 10px;
+        animation: up 14s infinite;
+    }
+
+    .bubble-2 {
+        right: 350px;
+        animation: up 12s infinite;
+    }
+
+    .bubble-3 {
+        right: 750px;
+        opacity: .30;
+        animation: up 15s infinite;
+    }
+
+    .bubble-4 {
+        right: 1150px;
+        animation: up 16s infinite;
+    }
+
+    .bubble-5 {
+        right: 50px;
+        animation: up 15s infinite;
+    }
+
+    .bubble-6 {
+        right: 300px;
+        opacity: .30;
+        animation: up 13s infinite;
+    }
+
+    .bubble-7 {
+        right: 670px;
+        animation: up 14s infinite;
+    }
+
+    .bubble-8 {
+        right: 1050px;
+        opacity: .30;
+        animation: up 13s infinite;
+    }
+
+    .bubble-9 {
+        right: 540px;
+        animation: up 14s infinite;
+    }
+
+    .bubble-10 {
+        right: 660px;
+        opacity: .30;
+        animation: up 15s infinite;
+    }
+
+    .bubble-11 {
+        right: 540px;
+        animation: up 12s infinite;
+    }
+
+    .bubble-12 {
+        right: 410px;
+        opacity: .30;
+        animation: up 11s infinite;
+    }
+
+    .bubble-13 {
+        right: 842px;
+        animation: up 10s infinite;
+    }
+
+    .bubble-14 {
+        right: 1155px;
+        opacity: .30;
+        animation: up 14s infinite;
+    }
+
+    .bubble-15 {
+        right: 1311px;
+        animation: up 12s infinite;
+    }
+
+    .bubble-16 {
+        right: 1434px;
+        opacity: .30;
+        animation: up 11s infinite;
+    }
+
+    .bubble-17 {
+        right: 536px;
+        animation: up 15s infinite;
+    }
+
+    .bubble-18 {
+        right: 1532px;
+        opacity: .30;
+        animation: up 14s infinite;
+    }
+
+    .bubble-19 {
+        right: 1511px;
+        opacity: .30;
+        animation: up 14s infinite;
+    }
+
+    .bubble-20 {
+        right: 1453px;
+        opacity: .30;
+        animation: up 23s infinite;
+    }
+
+    .bubble-21 {
+        right: 1143px;
+        opacity: .30;
+        animation: up 6s infinite;
+    }
+
+    .bubble-22 {
+        right: 1123px;
+        opacity: .30;
+        animation: up 13s infinite;
+    }
+
+    .bubble-23 {
+        right: 323px;
+        opacity: .3;
+        animation: up 6s infinite;
+    }
+
+    .bubble-24 {
+        right: 653px;
+        opacity: .20;
+        animation: up 8s infinite;
+    }
+
+    .bubble-25 {
+        right: 433px;
+        opacity: .21;
+        animation: up 7s infinite;
+    }
+
+    .bubble-26 {
+        right: 233px;
+        opacity: .34;
+        animation: up 6s infinite;
+    }
+
+    .bubble-27 {
+        right: 444px;
+        opacity: .12;
+        animation: up 7s infinite;
+    }
+
+    .bubble-28 {
+        right: 323px;
+        opacity: .3;
+        animation: up 6s infinite;
+    }
+
+    .bubble-29 {
+        right: 653px;
+        opacity: .20;
+        animation: up 8s infinite;
+    }
+
+    .bubble-30 {
+        right: 433px;
+        opacity: .21;
+        animation: up 7s infinite;
+    }
+
+    .bubble-31 {
+        right: 233px;
+        opacity: .34;
+        animation: up 6s infinite;
+    }
+
+    .bubble-32 {
+        right: 444px;
+        opacity: .12;
+        animation: up 7s infinite;
+    }
+
+    .bubble-33 {
+        right: 1353px;
+        opacity: .20;
+        animation: up 8s infinite;
+    }
+
+    .bubble-34 {
+        right: 1433px;
+        opacity: .21;
+        animation: up 9s infinite;
+    }
+
+    .bubble-35 {
+        right: 1233px;
+        opacity: .34;
+        animation: up 7s infinite;
+    }
+
+    .bubble-36 {
+        right: 1444px;
+        opacity: .12;
+        animation: up 8s infinite;
+    }
+
+    /* Bubbles Animation */
+    @keyframes up {
+        100% {
+            transform: translateY(-800px);
+        }
+    }
+</style>
+
+</html>
